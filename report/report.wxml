@@ -1,0 +1,49 @@
+<!--举报页面.WXML--雷云凯--2018/2/24  20：42-->
+<!--<view id='container'>-->
+<!-- 举报原因box -->
+<!--<view class='bec_report'>-->
+<text class='report_word'>请选择举报原因</text>
+<!--</view>-->
+
+
+<radio-group class="radio-group">
+    <block wx:for="{{radio}}">
+        <label class='label_radio' data-item="{{item.value}}" bindtap="radio_btn">
+            <text>{{item.value}}</text>
+            <radio></radio>
+        </label>
+    </block>
+</radio-group>
+
+
+<!-- 联系方式 -->
+<view class='report_box'>
+    <text class='report_phone'>请填写您的个人信息，方便我们联系您</text>
+</view>
+<block>
+    <view class='phone_box'>
+        <!-- 用户电话 -->
+        <view class='my_phone'>
+            <view class='phone_word'>
+                <text class='phone'>手机号</text>
+            </view>
+            <view class='phone_num'>
+                <input class='num' placeholder="选填" bindinput="phone"/>
+            </view>
+        </view>
+        <!-- 用户微信号 -->
+        <view class='wx_num'>
+            <view class='weixin_word'>
+                <text class='weixin'>微信号</text>
+            </view>
+            <view class='weinxin_num'>
+                <input class='num' placeholder="选填" bindinput="weixin"/>
+            </view>
+        </view>
+    </view>
+</block>
+<!-- 提交按钮 -->
+<view class='btn_submit'>
+    <button type='submit' class='submit' bindtap='submitBtn'>提交</button>
+</view>
+<!--</view>-->

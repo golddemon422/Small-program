@@ -1,0 +1,168 @@
+
+.report_word {
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 12px;
+  color: #848484;
+  margin-left: 20rpx;
+}
+
+.radio-group {
+  background-color: white;
+}
+
+.label_radio {
+  width: 100%;
+  display: block;
+  height: 78rpx;
+  line-height: 78rpx;
+
+  border-bottom: 1rpx solid #e6e6e6;
+}
+.label_radio radio{
+  float: right;
+}
+.label_radio text{
+  font-size: 32rpx;
+  padding-left:  24px;
+}
+/* 联系方式选择盒子 */
+
+.phone_box {
+  width: 100%;
+  height: 150rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.report_box {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #e6e6e6;
+}
+
+.report_phone {
+  width: 100%;
+  height: 70rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 28rpx;
+  color: #848484;
+  margin-left: 20rpx;
+}
+
+.my_phone {
+  width: 95%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.5rpx solid #dcdcdc;
+}
+
+.phone_word {
+  width: 30%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  color: #010101;
+  font-weight: 550;
+}
+
+.phone_num {
+  width: 70%;
+  height: 50rpx;
+}
+
+.num {
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 32rpx;
+}
+
+.wx_num {
+  width: 95%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rpx;
+}
+
+.weixin_word {
+  width: 30%;
+  height: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weixin {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  color: #010101;
+  font-weight: 550;
+}
+
+.weinxin_num {
+  width: 70%;
+  height: 50rpx;
+}
+
+.num {
+  width: 100%;
+  height: 50rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 28rpx;
+}
+
+/* 提交按钮 */
+
+.btn_submit {
+  width: 100%;
+  height: 80rpx;
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit {
+  width: 95%;
+  height: 80rpx;
+  margin: 0 auto;
+  background-color: #1aad19;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 32rpx;
+  outline-color: #1aad19;
+}
