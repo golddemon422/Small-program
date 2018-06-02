@@ -1,0 +1,9 @@
+<!--pages/address/address.wxml-->
+<view class='top-msg'>{{addAddressMsg}}</view>
+<view class='top-tips'>（您也可以进入微信>我>您的昵称>我的地址以修改地址）</view>
+<view class='top-tips'>（领取的奖品数量满 5 个可以包邮哦）</view>
+<input bindinput='bindInput' placeholder='点此输入要领取的奖品数量' class='input' placeholder-class='input-ph'></input>
+
+<view class='mid-tips'>(您有 {{prizeCount}} 件奖品)</view>
+
+<button bindtap='submit' class='button' hover-class='button-click'>确 认</button>

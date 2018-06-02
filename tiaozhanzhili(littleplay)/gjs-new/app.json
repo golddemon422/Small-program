@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/gameover/gameover",
+    "pages/result/result",
+    "pages/Prize/prize",
+    "pages/address/address"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#D9583A",
+    "navigationBarTitleText": "挑战智力",
+    "navigationBarTextStyle": "#ffffff",
+    "backgroundColor": "#FEE7B1"
+  },
+  "tabBar": {
+    "color": "#E3CF9F",
+    "selectedColor": "#ffffff",
+    "backgroundColor": "#d7b872",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "pages/image/challengeIntelligenceNoChoose.png",
+        "selectedIconPath": "pages/image/challengeIntelligChoose.png",
+        "text": "挑战智力"
+      },
+      {
+        "pagePath": "pages/Prize/prize",
+        "iconPath": "pages/image/prizeNoChoose.png",
+        "selectedIconPath": "pages/image/prizePointChoose.png",
+        "text": "我的奖品",
+        "title": "我的奖品"
+      }
+    ]
+  },
+  "subPackages": [
+    {
+      "root": "pages/game",
+      "pages": [
+        "game"
+      ]
+    }
+  ]
+}

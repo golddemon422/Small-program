@@ -1,0 +1,13 @@
+/* pages/gameover/gameover.wxss */
+.top-tips{
+  height: 350rpx;
+  width: 100%;
+}
+.top-tips .tips-content{
+  position: relative;
+  top:15%
+}
+.failedemoji{
+  width: 188rpx;
+  height: 188rpx
+}

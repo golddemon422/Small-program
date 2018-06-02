@@ -1,0 +1,10 @@
+<!--pages/gameover/gameover.wxml-->
+<view class='top-tips' bindtap='toIndex'>
+  <view class='tips-content'>
+    <image src='{{emojiSrc}}' class='failedemoji'></image>
+    <view class='result' style='font-size:50rpx;color:#DDC241'>{{result}}</view>
+    <text style='color:#DDC241'>点此回到主页</text>
+  </view>
+</view>
+
+<result modal-hidden="{{is_modal_Hidden}}" modal-msg="{{is_modal_Msg}}"/> 

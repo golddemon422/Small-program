@@ -1,0 +1,80 @@
+/* pages/game/game.wxss */
+/* 高京生
+   2018-01-29  
+*/
+page{
+  background-color: rgb(218, 89, 58);
+  text-align: center
+}
+.change-color{
+  background-color: #1BD6A8!important;
+}
+.red{
+  background-color: red!important;
+}
+/*顶部提示  */
+.top-tips{
+  font-size: 30rpx;
+  text-align: center;
+  width: 100%;
+  padding: 20rpx 0
+}
+.top-tips view{
+  width: 85%;
+  padding: 8rpx;
+  background-color: rgb(202, 78, 55);
+  margin: 10rpx auto;
+  color: rgb(246, 219, 167);
+  letter-spacing: 4rpx;
+  border-radius:10px
+}
+/*主要显示区域  */
+.main-box{
+  width: 96%;
+  height: 600rpx;
+  background-color: #FEF4DE;
+  border-radius: 6px;
+  display: inline-block;
+  text-align: center
+}
+.main-box .num{
+  display: inline-block;
+  width: 68rpx;
+  height: 68rpx;
+  text-align: center;
+  line-height: 23rpx;
+  background-color: #FFE7B1;
+  margin: 8rpx;
+  /* border: solid 8rpx #FEF4DE; */
+  color: white;
+  font-size: 32rpx;
+}
+
+/*隐藏滚动条  */
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+/*键盘相关  */
+.keyboard{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: white
+}
+.keyboard .key{
+  display: inline-block;
+  width: 32%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  margin: 1px;
+  border-radius: 6px;
+  background-color: rgba(182, 195, 209, 0.2)
+}
+/*倒计时  */
+.timer{
+  font-size: 32rpx;
+  padding: 20rpx 0
+}

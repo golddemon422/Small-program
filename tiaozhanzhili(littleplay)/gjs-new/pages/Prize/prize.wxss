@@ -1,0 +1,241 @@
+#container {
+  width: 100%;
+}
+page{
+  background-color: #FFBB02
+}
+.prizeBackImg {
+  width: 100%;
+  height: 765rpx;
+  background-image: url("https://api.cfoeu.cn//uploads//20180205//efe95e3225a6689f2a727b3a969686e7.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.share-button {
+  background: none;
+  border: none;
+  width: 260rpx;
+  position: absolute;
+  height: 70rpx;
+}
+
+.userPhotoBox {
+  width: 100%;
+  height: 155rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 120rpx;
+  /* border:1px solid red; */
+}
+
+.userInfo {
+  width: 86rpx;
+  height: 86rpx;
+}
+
+.userInfo-avatar {
+  width: 86rpx;
+  height: 86rpx;
+  border: 1px solid #fff;
+  border-radius: 360rpx;
+}
+
+.prizeNum {
+  /* width: 320rpx; */
+  height: 60rpx;
+  /* border: 1px solid red;  */
+  color: #732413;
+  font-size: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.challengeInvitationBox {
+  width: 100%;
+  height: 80rpx;
+  /* border: 1px solid greenyellow;  */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 280rpx;
+}
+
+.challengeInvitationBox view {
+  width: 100rpx;
+  height: 80rpx;
+  /* border: 1px solid red; */
+  font-size: 25rpx;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: #732413;
+}
+
+.timesofAchievement {
+  width: 100%;
+  /* height: 40rpx; *//* border:1px solid black;  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 165rpx;
+}
+
+.achievement {
+  width: 250rpx;
+  /* height: 60rpx;   *//* border:1px solid red;   */
+  padding-left: 108rpx;
+  color: #ffdad1;
+  font-size: 30rpx;
+}
+
+.achievement view {
+  width: 100%;
+  height: 65rpx;
+  background-color: #db5937;
+  border-radius: 360rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.achievement image {
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 10rpx;
+}
+
+.harvestTimer {
+  width: 250rpx;
+  /* height: 40rpx; *//* border:1px solid red; */
+  padding-right: 115rpx;
+  font-size: 30rpx;
+  color: #db5937;
+}
+
+.harvestTimer view {
+  width: 100%;
+  height: 65rpx;
+  border: 1px solid #db5937;
+  border-radius: 360rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 更多智力挑战 */
+
+.moreChallenge {
+  width: 94%;
+  height: 1500rpx;
+  border: 1px solid red;
+  background-color: #fee7b1;
+  margin: 0 auto;
+}
+
+.moreChallengeTitle {
+  width: 100%;
+  height: 50rpx;
+  /* border: 1px solid red; */
+  margin-top: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #cd533c;
+}
+
+.titleLeftLine {
+  width: 150rpx;
+  border: 1rpx solid #cd533c;
+  margin-right: 10rpx;
+}
+
+.titleRightLine {
+  width: 150rpx;
+  border: 1rpx solid #cd533c;
+  margin-left: 10rpx;
+}
+
+.moreOtherBox {
+  width: 100%;
+  height: 70rpx;
+  border: 1px solid red;
+}
+
+.moreOther {
+  width: 100%;
+  height: 70rpx;
+  /* border:1px solid black; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.moreOtherLeft {
+  width: 15%;
+  height: 70rpx;
+  /* border:1px solid green; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moreOtherLeft image {
+  width: 70rpx;
+  height: 70rpx;
+  border: 1px solid red;
+  border-radius: 360rpx;
+}
+
+.moreOtherMiddle {
+  width: 65%;
+  height: 70rpx;
+  /* border:1px solid #000; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.middleTop {
+  width: 100%;
+  height: 35rpx;
+  border: 1px solid red;
+}
+
+.middleBottom {
+  width: 100%;
+  height: 35rpx;
+  border: 1px solid red;
+}
+
+.moreOtherRight {
+  width: 20%;
+  height: 70rpx;
+  /* border:1px solid #453754; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goGet {
+  width: 100%;
+  height: 50rpx;
+  background-color: #d9583a;
+  border-radius: 360rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25rpx;
+  color: #fee7b1;
+}

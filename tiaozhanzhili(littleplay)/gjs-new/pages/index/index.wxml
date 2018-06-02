@@ -1,0 +1,238 @@
+<!-- index首页 -->
+<view id='container'>
+  <!-- 背景图 -->
+  <view class='backImg'>
+    <!-- 挑战规则 -->
+    <view class='ChallengeRulesBox'>
+      <view class='ChallengeSuccess'>
+        <view class='ChallengeWord'>
+          <text>挑战成功免费送娃娃</text>
+        </view>
+        <view class='ChallengePic'>
+          <image src='../image/attention.png' style='width:35rpx;height:35rpx;'></image>
+        </view>
+      </view>
+      <!--挑战规则模态框-->
+      <view class="btn" bindtap="powerDrawer" data-statu="open"></view>
+
+      <!--mask-->
+      <view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+      <!--content-->
+      <!--使用animation属性指定需要执行的动画-->
+      <view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+
+        <!--规则内容-->
+        <view class="drawer_title">
+          <view class='title_word'>
+            <text>挑战规则</text>
+          </view>
+          <view class='closeBtn' bindtap="powerDrawer" data-statu="close">
+            <text>X</text>
+          </view>
+        </view>
+        <view class="drawer_content">
+          <view wx:for="{{RealRuleDataArr}}" wx:key='{{index}}'>
+            <view class='ruleOne'>
+              <view class='ruleNo'>
+                <text>{{index+1}}</text>
+              </view>
+              <view class='ruleintroduce'>
+                {{item.rule}}
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class="btn_ok">
+          <view class='challengeWord'>
+            <text>挑战成功领取娃娃</text>
+          </view>
+          <view class='ReceiveBtn' bindtap='receivePrize'>
+            <text>立即领取</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 当前参赛次数盒子 -->
+    <view class='frontNum'>
+      <view class='recordCount'>
+        <text>当前共有{{RealAlltotal.total}}次参赛</text>
+      </view>
+    </view>
+    <!-- 开始按钮盒子 -->
+    <view class='startBox'>
+      <view class='startBtn' bindtap='startCha' style='background-image: url("{{startBackImg}}");'>
+
+      </view>
+    </view>
+    <!-- 分享按钮大盒子 -->
+    <view class='share'>
+
+      <view class='shareBox'>
+        <view class='sharePic'>
+          <image src='../image/wxpic.png' style='width:58rpx;height:60rpx'></image>
+        </view>
+        <view class='shareText'>
+          <button open-type='share' class='share-button' data-title='一起来挑战！'></button>
+          <text class='shareWord'>分享群,挑战机会+1</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 排行榜 -->
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">智力榜</view>
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">群内智力</view>
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="swichNav">娃娃奖品</view>
+  </view>
+
+  <!--<swiper current="{{currentTab}}" class="swiper-box" duration="100" style="height:{{baseHeight}}px" bindchange="bindChange">-->
+    <!-- 智力榜 -->
+    <view wx:if="{{currentTab == 0}}">
+      <!-- 昨日智力排行榜单 -->
+      <view class='listOne'>
+        <view class='lastDay'>
+          <text class='list'>昨日智力排行榜</text>
+        </view>
+        <!-- 循环智力榜-昨日智力排行信息 -->
+        <block wx:for="{{ReallastDataArr}}" wx:key='{{index}}'>
+          <view class='lastDayData'>
+            <!-- 名次头像昵称 -->
+            <view class='numName'>
+              <view class='ranking' style='background:{{index<4?defColorArr[index]:defColorArr[4]}}'>{{index+1}}</view>
+               <view class='userRankingPic'>
+                 <image src='{{item.user_icon}}' class='icon_img'></image>
+               </view>
+
+              <view class='userName'>
+                <text>{{item.user_name}}</text>
+              </view>
+            </view>
+            <!-- 获得娃娃数量 -->
+            <view class='kidsNum'>
+              <view class='kids'>
+                <text>获得<text class='kidsColor'>{{item.user_prizes}}</text>个娃娃</text>
+              </view>
+              <view class='kidsPrice'>
+                <text>价值<text>{{item.user_prizes*56}}</text>元</text>
+              </view>
+            </view>
+          </view>
+        </block>
+      </view>
+      <!-- 毅力排行榜 -->
+      <view class='Stamina'>
+        <view class='StaminaTitle'>
+          <text class='list'>毅力排行榜</text>
+        </view>
+        <!-- 循环毅力榜 -->
+        <block wx:for="{{RealStaminaArr}}" wx:key='{{index}}'>
+          <!-- 重复使用与上面相同CSS样式 -->
+          <view class='lastDayData'>
+            <!-- 名次头像昵称 -->
+            <view class='numName'>
+              <view class='ranking' style='background:{{index<4?defColorArr[index]:defColorArr[4]}}'>{{index+1}}</view>
+              <view class='userRankingPic'>
+                <image src='{{item.user_icon}}' class='icon_img'></image>
+              </view>
+              <view class='userName'>
+                <text>{{item.user_name}}</text>
+              </view>
+            </view>
+            <!-- 连续挑战次数 -->
+            <view class='continuity'>
+              <view class='continuityTimes'>
+                连续挑战
+                <text class='continuityCount'>{{item.user_challenges}}</text>次
+              </view>
+            </view>
+          </view>
+        </block>
+        <!-- 保留 -->
+       <view class='moreAdd'>
+          <text bindtap="getMore">点击加载更多</text>
+        </view>
+      </view>
+    </view>
+    <!-- 群内智力 -->
+    <view class='group-box' wx:if="{{currentTab == 1}}">
+      <view class='listTwo'>
+        <view class='groupListTitle'>
+          <text class='list'>群内智力排行榜</text>
+        </view>
+        <!-- 循环群内智力排行榜 -->
+        <view wx:if='{{!RealGroupDataArr.length}}'>
+          分享到群才能看到群排行榜！
+        </view>
+        <block wx:for='{{RealGroupDataArr}}' wx:key='{{index}}'>
+          <view class='groupList'>
+            <!-- 名次头像昵称 -->
+            <view class='numName'>
+              <view class='ranking' style='background:{{index<4?defColorArr[index]:defColorArr[4]}}'>{{index+1}}</view>
+              <view class='userRankingPic'>
+                <image src='{{item.user_icon}}' class='icon_img'></image>
+              </view>
+              <view class='userName'>{{item.user_name}}</view>
+            </view>
+            <!-- 最大写到数字 -->
+            <view class="maxCount">
+              <view>
+                最大写到
+                <text class='maxCountColor'>{{item.max_number}}</text>
+              </view>
+            </view>
+          </view>
+        </block>
+        <!-- 群内智力页面底部分享按钮与文字 -->
+        <view class='bottomBox'>
+          <view class='shareWord'>
+            <text>转发到微信群，看好友最大能写到多少</text>
+
+          </view>
+
+
+          <button open-type='share' data-title='一起来挑战吧！' class="btn-share">
+
+                <image src='../image/scorePic.png' style='width:58rpx;height:60rpx;margin-right:10rpx;'></image>
+                <text>分享到微信群</text>
+
+          </button>
+
+
+
+        </view>
+      </view>
+
+    </view>
+    <!-- 娃娃奖品 -->
+    <view wx:if="{{currentTab == 2}}">
+      <view class='listThree'>
+        <!-- 领取娃娃 -->
+        <view class='ReceiveAprize'>
+          <view class='ReaceiveWord'>
+            <text>挑战成功领取娃娃</text>
+          </view>
+          <view class='Reaceive'>
+            <view class='immediatelyGet' bindtap='receivePrize'>
+              <text>立即领取</text>
+            </view>
+          </view>
+        </view>
+        <!-- *******************循环娃娃图片和介绍******************* -->
+        <block wx:for="{{RealKidsDataArr}}"  wx:key="unique">
+          <view class='KidsPic'>
+            <view class='PlushDollPic'>
+              <image src="{{item.prize_img}}" />
+            </view>
+            <view class='PlushdollName'>
+              <text>{{index+1}}</text>、
+              <text>{{item.prize_title}}</text>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+  <!--</swiper>-->
+  
+  
+  <view class='clear'></view>
+</view>

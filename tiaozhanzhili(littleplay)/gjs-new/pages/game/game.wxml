@@ -1,0 +1,27 @@
+ <!--pages/game/game.wxml-->
+<!--
+  页面名称：游戏界面
+  创建时间：2018-01-29
+  创建者：高京生
+-->
+<!--顶部提示  -->
+<view class="top-tips">
+  <view>数字1到500左至右依次输入，不删、不改</view>
+</view>
+<!--主显示窗口  -->
+<!--<scroll-view scroll-y class="main-box" scroll-top="{{scrollTop}}">-->
+<scroll-view scroll-y class="main-box" scroll-into-view="sid{{num}}">
+   <input wx:for="{{boxArray}}" wx:key='{{index}}' class="num {{color[index]}}" value="{{item}}" id="sid{{item}}">
+
+  </input>
+</scroll-view>
+
+<!--键盘  -->
+<view class="keyboard">
+<view class="timer">调整键盘顺序倒计时 {{timer}} 秒</view>
+  <view wx:for="{{keyArray}}"  wx:key='{{index}}' class="key" data-sid="{{item}}" bindtap="keydown">
+    {{item}}
+  </view>
+</view>
+<!--背景音乐  -->
+<audio id="bgm" src="{{bgmSrc}}" loop action='{{action}}'></audio>

@@ -1,0 +1,64 @@
+<!--我的奖品页面-->
+<view id='container'>
+  <!-- 背景图 -->
+  <view class='prizeBackImg'>
+    <!-- 用户头像与奖品数量盒子 -->
+    <view class='userPhotoBox'>
+      <!-- 用户头像 -->
+      <!-- <view bindtap='bindViewTap' class='userinfo'>
+        <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      </view> -->
+
+      <view bindtap="bindViewTap" class="userInfo">
+        <image class="userInfo-avatar" src="{{RealuserInformationArr.user_icon}}" background-size="cover"></image>
+      </view>
+
+      <!-- 昵称和奖品数量 -->
+      <view class='prizeNum'>
+        <!-- <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+        <text class="userinfo-nickname">{{RealuserInformationArr.user_name}}</text>
+
+        <text> 共有 {{RealuserInformationArr.user_prizes}} 个娃娃未领取</text>
+      </view>
+    </view>
+    <!-- 挑战邀请码盒子 -->
+    <block>
+      <view class='challengeInvitationBox'>
+        <!-- 挑战机会 -->
+
+        <view>
+          <text>{{RealuserInformationArr.reset_challenges}}次</text>
+          <text>挑战机会</text>
+        </view>
+        <!-- 已挑战次数 -->
+        <view>
+          <text>{{RealuserInformationArr.user_challenges}}次</text>
+          <text>已挑战</text>
+        </view>
+        <!-- 邀请码 -->
+        <view>
+          <text>{{RealuserInformationArr.max_number}}</text>
+          <!-- <text>{{RealuserInformationArr.max_number}}</text>  -->
+          <text>最高纪录</text>
+        </view>
+      </view>
+    </block>
+    <!-- 炫耀挑战成绩与获得挑战次数 -->
+    <view class='timesofAchievement'>
+      <view class='achievement'>
+        <view>
+        <button open-type='share' class='share-button' data-title='来跟我比一比！'></button>
+          <image src='../image/scorePic.png'></image>
+          <text>炫耀战绩</text>
+        </view>
+      </view>
+      <view class='harvestTimer'>
+        <view bindtap='getChance'>
+          <text>获得挑战次数</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view>
+</view>
+</view>

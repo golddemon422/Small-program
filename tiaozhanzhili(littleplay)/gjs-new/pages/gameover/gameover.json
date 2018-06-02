@@ -1,0 +1,7 @@
+{"usingComponents": {
+    "result": "../result/result"
+  },
+  "navigationBarTitleText": "挑战结果",
+  "navigationBarBackgroundColor": "#DA593A",
+  "navigationBarTextStyle": "white"
+}

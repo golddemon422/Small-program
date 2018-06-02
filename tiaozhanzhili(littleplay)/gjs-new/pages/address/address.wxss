@@ -1,0 +1,37 @@
+/* pages/address/address.wxss */
+page{
+  text-align: center
+}
+.top-msg{
+  color: #D9583A;
+  padding: 20rpx
+}
+.top-tips,.mid-tips{
+  color: #D9583A;
+  font-size: 26rpx;
+  padding: 20rpx
+}
+.input,.button{
+  display: inline-block;
+  border: solid 1px #D9583A;
+  height: 70rpx;
+  width: 80%;
+  border-radius: 4rpx
+}
+.input-ph{
+  font-size: 30rpx
+}
+.button{
+  line-height: 70rpx;
+  position: fixed;
+  bottom: 60rpx;
+  left: 0;
+  right: 0
+}
+.button-click{
+  background-color: #D9583A;
+  color: white
+}
+.button::after{
+  border: none
+}

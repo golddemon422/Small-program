@@ -1,0 +1,38 @@
+<!--pages/result/result.wxml-->
+<!--创建者：高京生
+    创建时间：2018-02-01 09：59
+-->
+<button open-type="share" class='share'  data-title='一起来挑战！！'>
+<view class='item item-s' data-sid='0'>
+  <view class='border'>
+    <view class='square square1'></view>
+    <view class='square square2'></view>
+    <view class='square square3'></view>
+    <view class='square square4'></view>
+    <view class='left'>
+      <view style='color:#DDC241'>分享，挑战机会+1</view>
+      <view style='font-size:26rpx' class='text-red'>每分享1个不同的群，机会+1，每天最多5次</view>
+    </view>
+    <view class='right'>
+      <view style='color:#DDC241'>免费</view>
+    </view>
+  </view>
+</view>
+</button>
+
+<view wx:for='{{list}}' wx:key='{{index}}' class='item' data-sid='{{item.goods_id}}' bindtap='payForChance'>
+  <view class='border'>
+    <view class='square square1'></view>
+    <view class='square square2'></view>
+    <view class='square square3'></view>
+    <view class='square square4'></view>
+    <view class='left'>
+    <view class='text-red'>{{item.goods_title}}</view>
+    <view style='font-size:26rpx' class='text-red'>{{item.goods_desc}}</view>
+  </view>
+  <view class='right'>
+    <view class='text-red'>{{item.sale_price}} 元</view>
+    <view style='text-decoration:line-through;font-size:26rpx' class='text-red'>{{item.original_price}}元</view>
+  </view>
+  </view>
+</view>
